@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>002</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="styles/common.css" type="text/css" />
+  <link href="data/002.csv" type="text/csv" rel="exhibit/data" data-ex-properties="County,label,LastName,FirstName,MiddleName,Suffix,StreetNum,StreetName,AptUnit,City,State,ZipCode,MailingStreetNum,MailingStreetName,MailingAptUnit,MailingCity,MailingState,MailingZipCode,AppStatus,BallotStatus,StatusReason,AppDate,BallotIssuedDate:date,BallotReturnDate:date,BallotStyle,BallotAssisted,ChallengedProvisional,IDRequired,MunicipalPrecinct,CountyPrecinct,CNG,SEN,HOUSE,JUD,ComboNum,VoteCenterID,BallotID,PostNum,Party" data-ex-has-column-titles="true"/>
+    <script src="api/exhibit-api.js"></script>
+    <style>
+      td {
+        padding: 2px
+      }
+      .inline {
+	display: inline-block; 
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul id="path">
+      <li><a href="index.html">Home</a></li>
+    </ul>
+    <h1>Voter Data 002</h1>
+    <div class="row search-dialog" >                                                                                                                      
+  	   Search: <div data-ex-role="facet" data-ex-facet-class="TextSearch" data-ex-expressions=".County, .label, .LastName, .FirstName, .MiddleName, .StreetNum, .StreetName, .AptUnit, .City, .State, .ZipCode, .MailingStreetNum, .MailingStreetName, .MailingAptUnit, .MailingCity, .MailingState, .MailingZipCode, .Party"
+            ><div class="exhibit-text-facet"><input type="text"></div></div>
+    </div>
+    <div class="inline">
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="LastName"  data-ex-expression=".LastName" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="FirstName"  data-ex-expression=".FirstName" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="MiddleName"  data-ex-expression=".MiddleName" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="StreetName"  data-ex-expression=".StreetName" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="City"  data-ex-expression=".City"   ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="State"  data-ex-expression=".State"  ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="ZipCode"  data-ex-expression=".ZipCode" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="County"  data-ex-expression=".County" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="Party"  data-ex-expression=".Party" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="AppStatus"  data-ex-expression=".AppStatus" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="BallotStatus"  data-ex-expression=".BallotStatus" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="StatusReason"  data-ex-expression=".StatusReason" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="BallotIssuedDateAppDate"  data-ex-expression=".AppDate" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="BallotIssuedDate"  data-ex-expression=".BallotIssuedDate" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="BallotReturnDate"  data-ex-expression=".BallotReturnDate" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="BallotStyle"  data-ex-expression=".BallotStyle" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="BallotAssisted"  data-ex-expression=".BallotAssisted" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="ChallengedProvisional"  data-ex-expression=".ChallengedProvisional" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="IDRequired"  data-ex-expression=".IDRequired" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="MunicipalPrecinct"  data-ex-expression=".MunicipalPrecinct" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="CountyPrecinct"  data-ex-expression=".CountyPrecinct" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="CNG"  data-ex-expression=".CNG" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="SEN"  data-ex-expression=".SEN" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="HOUSE"  data-ex-expression=".HOUSE" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="JUD"  data-ex-expression=".JUD" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="ComboNum"  data-ex-expression=".ComboNum" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="VoteCenterID"  data-ex-expression=".VoteCenterID" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="BallotID"  data-ex-expression=".BallotID" ></div>
+        <div  class="inline" data-ex-role="exhibit-facet" data-ex-facet-label="PostNum"  data-ex-expression=".PostNum" ></div>
+    </div>
+
+
+    <div data-ex-role="exhibit-viewPanel">
+        <div data-ex-role="exhibit-view"
+            data-ex-view-class="Exhibit.TabularView"
+            data-ex-label="Table"
+            data-ex-columns=".County, .label, .LastName, .FirstName, .MiddleName, .Suffix, .StreetNum, .StreetName, .AptUnit, .City, .State, .ZipCode, .MailingStreetNum, .MailingStreetName, .MailingAptUnit, .MailingCity, .MailingState, .MailingZipCode, .AppStatus, .BallotStatus, .StatusReason, .AppDate, .BallotIssuedDate, .BallotReturnDate, .BallotStyle, .BallotAssisted, .ChallengedProvisional, .IDRequired, .MunicipalPrecinct, .CountyPrecinct, .CNG, .SEN, .HOUSE, .JUD, .ComboNum, .VoteCenterID, .BallotID, .PostNum, .Party"
+            data-ex-column-labels="County,RegNum,LastName,FirstName,MiddleName,Suffix,StreetNum,StreetName,AptUnit,City,State,ZipCode,MailingStreetNum,MailingStreetName,MailingAptUnit,MailingCity,MailingState,MailingZipCode,AppStatus,BallotStatus,StatusReason,AppDate,BallotIssuedDate,BallotReturnDate,BallotStyle,BallotAssisted,ChallengedProvisional,IDRequired,MunicipalPrecinct,CountyPrecinct,CNG,SEN,HOUSE,JUD,ComboNum,VoteCenterID,BallotID,PostNum,Party"
+            data-ex-column-formats="list, list, list, list"
+            data-ex-row-atyler="rowStyler"
+            data-ex-sort-column="2" data-ex-sort-ascending="true"
+            >
+        </div>
+        <div data-ex-role="exhibit-view"
+            data-ex-label="Tiles"
+            data-ex-paginate="true"
+          ></div>
+    </div>
+  </body>
+</html>
+
